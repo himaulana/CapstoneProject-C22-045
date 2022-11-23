@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "This is project final from team C22-045 ",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon ./src/scripts/server.js ",
+    "lint": "eslint ./src"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +19,9 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
     "eslint": "^8.28.0",
+    "eslint-config-google": "^0.14.0",
     "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.20",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0",
@@ -24,6 +29,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@hapi/hapi": "^21.0.0",
+    "nanoid": "^4.0.0",
     "regenerator-runtime": "^0.13.11"
   }
 }
