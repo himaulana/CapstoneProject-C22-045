@@ -57,33 +57,46 @@ span {
   color: #FF3932;
 }
 
+.ideas {
+  color: #D66D4D;
+}
+
 .hero {
-  background-image: url("hero-image.jpg");
+  background-image: url("../public/images/hero-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
 
-@media only screen and (max-width: 600px) {
-  .hero {
-    height: 70vh
-  }
-}
-
 .contact-us {
-  background-image: url("contactus-image.jpg");
+  background-image: url("../public/images/contactus-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 75vh;
-  border-radius: 50px;
+  border-radius: 17px;
+}
+
+.contact-us2 {
+    background-image: url("../public/images/form-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    border-radius: 17px;
 }
 
 .form-email {
   background: rgba(255, 255, 255, 0.27);
   backdrop-filter: blur(9.5px);
   border-radius: 21px;
+}
+
+.input-email2 {
+  background: rgba(255, 152, 15, 0.82);
+backdrop-filter: blur(9.5px);
+border-radius: 9px;
 }
 
 .form-control {
@@ -127,4 +140,39 @@ span {
   background-color: #0F222B;
   border: 2px solid #0F222B;
   border-radius: 5px;
+}
+
+.filter-image {
+  filter: drop-shadow(5px 5px 55px rgba(0, 0, 0, 0.25));
+  border-radius: 50px;
+}
+
+.filter-card {
+  background: #F5F5F5;
+  box-shadow: 5px 5px 55px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.detail-card {
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 4px 4px 55px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.filter-image-detail {
+  background: url(5.jpg);
+  background-color: white;
+  filter: drop-shadow(9px 9px 11px rgba(0, 0, 0, 0.25));
+  border-radius: 50px;
+  height: 100%;
+}
+
+.desc {
+  margin-left: -32px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    height: 70vh
+  }
 }
