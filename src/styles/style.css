@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 .text-base {
   color: #0F222B;
-} 
+}
 
-a  {
-   min-height: 42px;
-   min-width: 42px;
+a {
+  min-height: 42px;
+  min-width: 42px;
 }
 
 button {
@@ -19,7 +24,8 @@ button {
   min-height: 42px;
 }
 
-.bg-ijo, body {
+.bg-ijo,
+body {
   background-color: #E1FFDE;
 }
 
@@ -47,6 +53,11 @@ button {
   height: 42px;
 }
 
+.account-button {
+  background: #FFFFFF;
+  border-radius: 40px;
+}
+
 .explore-button {
   background-color: #FF980F;
   border-radius: 7px;
@@ -61,12 +72,17 @@ span {
   color: #D66D4D;
 }
 
+.space {
+  height: 100vh;
+}
+
 .hero {
   background-image: url("../public/images/hero-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  border-radius: 50px;
 }
 
 .contact-us {
@@ -79,12 +95,21 @@ span {
 }
 
 .contact-us2 {
-    background-image: url("../public/images/form-image.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 75vh;
-    border-radius: 17px;
+  background-image: url("../public/images/form-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  border-radius: 17px;
+}
+
+.contact-us3 {
+  background-image: url("../public/images/form-image2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  border-radius: 17px;
 }
 
 .form-email {
@@ -93,10 +118,22 @@ span {
   border-radius: 21px;
 }
 
+.border-random {
+  border: 3px solid;
+  border-image-source: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.form-email2 {
+  background: rgba(205, 219, 204, 0.7);
+  backdrop-filter: blur(9.5px);
+  border-radius: 21px;
+
+}
+
 .input-email2 {
   background: rgba(255, 152, 15, 0.82);
-backdrop-filter: blur(9.5px);
-border-radius: 9px;
+  backdrop-filter: blur(9.5px);
+  border-radius: 9px;
 }
 
 .form-control {
@@ -113,16 +150,20 @@ border-radius: 9px;
   border-radius: 9px;
 }
 
-.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
-.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: white;
 }
 
-.form-control::-ms-input-placeholder { /* Microsoft Edge */
+.form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: white;
 }
 
@@ -159,20 +200,48 @@ border-radius: 9px;
   border-radius: 50px;
 }
 
+.login-card {
+  filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.1));
+}
+
 .filter-image-detail {
-  background: url(5.jpg);
   background-color: white;
   filter: drop-shadow(9px 9px 11px rgba(0, 0, 0, 0.25));
   border-radius: 50px;
   height: 100%;
 }
 
-.desc {
-  margin-left: -32px;
+.detail {
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 4px 4px 55px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.card-tanaman {
+  min-height: 40vh;
+}
+
+.form-move {
+  margin-right: 100px;
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 600px) {
   .hero {
     height: 70vh
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .add-vh60 {
+    height: 60vh;
+  }
+
+  .add-vh30 {
+    height: 20vh;
+  }
+
+  .set-width {
+    width: 40vh;
   }
 }
