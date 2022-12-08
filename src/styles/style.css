@@ -85,6 +85,15 @@ span {
   border-radius: 50px;
 }
 
+.hero1 {
+  background-image: url("../public/images/hero-image.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  border-radius: 50px;
+}
+
 .contact-us {
   background-image: url("../public/images/contactus-image.jpg");
   background-position: center;
@@ -167,6 +176,29 @@ span {
   color: white;
 }
 
+.login > .form-control {
+  border-radius: 5px;
+}
+
+.login > .form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #BCBEC0;
+  opacity: 1;
+  /* Firefox */
+}
+
+.login > .form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #BCBEC0;
+}
+
+.login > .form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #BCBEC0;
+}
+
+
+
 .button-send {
   border: 3px solid;
   border-image-source: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
@@ -226,11 +258,49 @@ span {
   margin-top: 40px;
 }
 
+.vh-100 {
+  min-height: 100vh;
+}
+
+.sm-fs {
+  font-size: 0.8em;
+}
+
+::-webkit-input-placeholder {
+  font-size: 10px!important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+     font-size: 10px!important;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+     font-size: 10px!important;
+}
+
+@media (max-width: 1200px) {
+  .login-fs {font-size: 1.5em;}
+  .sm-fs {
+    font-size: 1em;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 13px!important;
+  }
+  
+  :-moz-placeholder { /* Firefox 18- */
+       font-size: 13px!important;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+       font-size: 13px!important;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .hero {
     height: 70vh
   }
 }
+
 
 @media only screen and (min-width: 600px) {
   .add-vh60 {
