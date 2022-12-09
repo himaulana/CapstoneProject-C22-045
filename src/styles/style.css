@@ -197,7 +197,39 @@ span {
   color: #BCBEC0;
 }
 
+#ask{
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 37px;
+  display: flex;
+  align-items: flex-end;
+  color: #000000;
+}
 
+#text1 {
+  margin: 0 20px;
+  padding-bottom: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-end;
+  color: #000000;
+}
+
+#plant {
+  font-weight: 400;
+  font-size: 14px;
+  align-items: flex-end;
+}
+
+#full-name {
+  background: #FFFFFF;
+  border-radius: 10px;
+  border-style: none;
+  display: grid;
+  padding: 10px;
+  font-size: 14px;
+}
 
 .button-send {
   border: 3px solid;
