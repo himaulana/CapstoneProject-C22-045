@@ -16,13 +16,13 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md bg-ijo p-3 mb-4">
+  <nav class="navbar navbar-expand-md bg-ijo p-3">
     <div class="container-sm d-flex ">
       <div class="flex-grow-1">
         <a class="fs-3 navbar-brand fw-semibold" href="#">Tand<span class="text-red">uran</span></a>
       </div>
       <div class="order-sm-3">
-        <a href="" class="nav-link text-dark ms-3">
+        <a class="nav-link text-dark ms-3">
           <img src="./public/images/icon-profile.png" alt="Profile icon" width="42px">
         </a>
       </div>
@@ -39,12 +39,15 @@
             <a class="nav-link text-base me-3" href="#">Explore</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link text-base me-3" href="#">Services</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link text-base me-3">
               Sign Up
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link text-base me-3">
+            <a class="nav-link text-base me-3">
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1_40)">
                   <path
@@ -71,60 +74,30 @@
     </div>
   </nav>
 
-  <div class="container-xl hero p-5 text-base">
-    <div class="row">
-      <div class="col-sm-12 col-lg-6">
-        <h1 class="display-4 fw-bold">Find the perfect plants for your garden</h1>
-        <form class="d-flex flex-row ">
-          <input type="text" class="form-control flex-grow-2 form-input py-3">
-          <button type="button" class="btn btn-warning button-input button-search fw-semibold text-base">Search</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-xl text-base t-5 pt-5">
-    <div class="row flex-lg-row align-items-center py-5">
-      <div class="col-lg-7">
-        <img src="./public/images/about-image2.png" alt="Growing Plants" class="dblock mx-lg-auto img-fluid"
-          width="1200px">
-      </div>
-      <div class="col-12 col-lg-5 text-lg-start text-center">
-        <h2 class="fw-semibold fs-1 lh-sm mb-4 text-break">Improve local ecosystems and air quality by growing plants
-        </h2>
-        <p class="fw-semibold text-wrap text-break">Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.<br>
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-          gallery of type and scrambled it to make a type specimen book.</p>
-        <button type="button"
-          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button text-base">Explore Now</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-xl py-5 text-base text-center
-  ">
-    <h2 class="fs-1 fw-semibold">Let's find plants that are currently popular</h2>
-    <p class="fw-semibold fs-6">Lorem ipsum is simply dummy text of printing and typesetting
-      industry
-    </p>
+  <div class="container-xl text-base text-center my-5">
+    <h2 class="fw-bold fs-1 lh-sm text-break">My Profile
+    </h2>
+    <img src="./public/images/icon-profile.png" alt="Growing Plants" class="dblock mx-lg-auto img-fluid my-4"
+      width="300px">
+    <button type="button"
+      class="btn btn-warning button-input mt-2 mx-auto px-5 py-3 fw-semibold d-block explore-button">Edit</button>
   </div>
 
   <section class="py-5">
     <div class="container-xl">
       <div class="row">
         <div class="col-6">
-          <h2 class="fw-semibold mb-5 px-auto">Popular Plant</h2>
+          <h2 class="fw-semibold mb-5 px-auto">My Garden</h2>
         </div>
         <div class="col-6 text-end">
-          <a href="#carouselExampleIndicators2" role="button" data-slide="prev">
+          <a href="#carouselExampleIndicators3" role="button" data-slide="prev">
             <button class="rounded-2 less-than bg-transparent mx-auto"><svg width="17" height="25" viewBox="0 0 17 25"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 2L3 12.5L15 23" stroke="#0F222B" stroke-width="3" stroke-linecap="round" />
               </svg>
             </button>
           </a>
-          <a href="#carouselExampleIndicators2" role="button" data-slide="next">
+          <a href="#carouselExampleIndicators3" role="button" data-slide="next">
             <button class="rounded-2 more-than ms-4 mx-auto"><svg width="17" height="25" viewBox="0 0 17 25" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 2L14 12.5L2 23" stroke="white" stroke-width="3" stroke-linecap="round" />
@@ -133,24 +106,14 @@
           </a>
         </div>
         <div class="col-12">
-          <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
+          <div id="carouselExampleIndicators3" class="carousel slide" data-interval="false">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row">
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
-                        <div class="card-body">
-                          <h2 class="fw-semibold">1Sirih Gading</h3>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -158,9 +121,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -168,9 +131,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -178,9 +141,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -188,9 +151,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -198,9 +161,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -208,19 +171,29 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
-                          <h2 class="fw-   semibold">Sirih Gading</h3>
+                          <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
                       </div>
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
+                        <div class="card-body">
+                          <h2 class="fw-semibold">Sirih Gading</h3>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -232,9 +205,9 @@
               <div class="carousel-item">
                 <div class="row">
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -242,9 +215,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -252,9 +225,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -262,9 +235,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -272,9 +245,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -282,9 +255,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -292,9 +265,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -302,9 +275,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -312,9 +285,9 @@
                     </a>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#/detail-plants" class="text-decoration-none text-base link-dark">
-                      <div class="card rounded-5 card-plant mb-3 text-center">
-                        <img src="./images/about-image2.png" class="m-3" alt="">
+                    <a href="" class="text-decoration-none text-black text-base">
+                      <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                        <img src="./public/images/about-image2.png" class="m-3" alt="">
                         <div class="card-body">
                           <h2 class="fw-semibold">Sirih Gading</h3>
                         </div>
@@ -331,7 +304,89 @@
   </section>
 
   <div class="container-xl text-base">
-    <div class="row flex-lg-row-reverse align-items-center pb-5 pt-lg-">
+    <div class="row flex-lg-row-reverse align-items-center py-5">
+      <div class="col-lg-7">
+        <img src="./public/images/explore-image.png" alt="Growing Plants"
+          class="dblock mx-lg-auto img-fluid filter-image" width="1200px">
+      </div>
+      <div class="col-12 col-lg-5 text-lg-start text-center">
+        <h2 class="fw-bold fs-1 lh-sm text-break">Add a new plant
+        </h2>
+        <button type="button"
+          class="btn btn-warning button-input mt-5 mx-auto px-5 py-3 fw-semibold d-block explore-button"
+          data-bs-toggle="modal" data-bs-target="#addForm">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="addFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-ijo">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="addFormLabel">Add Plant</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form action="">
+            <div class="mb-3">
+              <label for="Plant name" class="form-label col-form-label">The plants name</label>
+              <input type="text" class="form-control form-input" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="Plant name" class="form-label col-form-label">Botani name</label>
+              <input type="text" class="form-control form-input" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="Common name" class="form-label col-form-label">Common name</label>
+              <input type="text" class="form-control form-input" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="Type of plant" class="form-label col-form-label">Plant type</label>
+              <input type="text" class="form-control form-input" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="Amount of sun needed" class="form-label col-form-label">Sun exposure</label>
+              <input type="text" class="form-control form-input" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="What kind of soil" class="form-label col-form-label">Soil type</label>
+              <input type="text" class="form-control form-input" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="Where it lived" class="form-label col-form-label">Native area</label>
+              <input type="text" class="form-control form-input" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="Deskripsi tanaman" class="form-label col-form-label">Describe your plant</label>
+              <textarea class="form-control form-input" id="exampleFormControlTextarea1" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="Deskripsi tanaman" class="form-label col-form-label">How to plant it</label>
+              <textarea class="form-control form-input" id="exampleFormControlTextarea1" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="Deskripsi tanaman" class="form-label col-form-label">How to take care of it</label>
+              <textarea class="form-control form-input" id="exampleFormControlTextarea1" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="Deskripsi tanaman" class="form-label col-form-label">Pest and desease</label>
+              <textarea class="form-control form-input" id="exampleFormControlTextarea1" rows="4"></textarea>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl text-base text-center">
+    <div class="row flex-lg-row align-items-center pb-5 pt-lg-">
       <div class="col-lg-7">
         <img src="./public/images/tips-image.png" alt="Growing Plants" class="dblock mx-lg-auto img-fluid"
           width="700px">
@@ -343,8 +398,7 @@
           industry.<br>
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
           gallery of type and scrambled it to make a type specimen book.</p>
-        <button type="button" class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button">Explore
-          Now</button>
+        <button type="button" class="btn button-input mt-2 px-5 py-3 fw-semibold explore-button">Explore Now</button>
       </div>
     </div>
   </div>
@@ -360,7 +414,7 @@
             placeholder="Type your message.."></textarea>
         </div>
         <div class="mb-2 text-center">
-          <button class="btn btn-danger shadow-none rounded-4 w-75 input-email text-base ">Send now</button>
+          <button class="btn btn-primary shadow-none rounded-4 w-75 input-email text-white ">Send now</button>
         </div>
       </div>
     </div>
@@ -398,8 +452,12 @@
       </div>
     </footer>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"></script>
 </body>
 

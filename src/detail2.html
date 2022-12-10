@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanduran</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+  <script type='text/javascript'
+    src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-ijo p-3">
+    <div class="container-sm d-flex ">
+      <div class="flex-grow-1">
+        <a class="fs-3 navbar-brand fw-semibold" href="#">Tand<span class="text-red">uran</span></a>
+      </div>
+      <div class="order-sm-3">
+        <a class="nav-link text-dark ms-3">
+          <img src="./public/images/icon-profile.png" alt="Profile icon" width="42px">
+        </a>
+      </div>
+      <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse fw-semibold text-start justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav fw-semibold">
+          <li class="nav-item">
+            <a class="nav-link text-base me-3" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-base me-3" href="#">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-base me-3" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-base me-3">
+              Sign Up
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-base me-3">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_40)">
+                  <path
+                    d="M11 20.949C11.385 20.9401 11.7544 20.7954 12.0429 20.5404C12.3315 20.2854 12.5205 19.9366 12.5767 19.5557H9.36224C9.41998 19.947 9.61789 20.304 9.91915 20.5603C10.2204 20.8166 10.6045 20.9547 11 20.949Z"
+                    fill="#0F222B" />
+                  <path
+                    d="M19.575 18.4139V17.4162L19.5364 17.3821L19.5346 17.3805C18.9116 16.8254 18.3663 16.1889 17.9134 15.488L17.8997 15.4668L17.8882 15.4443C17.3899 14.4699 17.0912 13.4058 17.0097 12.3145L17.0083 12.2959V12.2772V9.26005C17.0067 9.02953 16.9922 8.79936 16.9648 8.57062L19.575 18.4139ZM19.575 18.4139H2.36389V17.4162L2.40248 17.3821L2.40251 17.3822L2.40767 17.3775C3.02134 16.8206 3.55783 16.1842 4.00288 15.4852L4.01555 15.4653L4.02628 15.4443C4.52457 14.4699 4.82323 13.4058 4.90473 12.3145L4.90611 12.2959V12.2772L4.90612 9.25833L4.90611 9.25713C4.90257 7.78293 5.43249 6.35722 6.39803 5.24321C7.36357 4.1292 8.69954 3.40212 10.1593 3.1962L10.5894 3.13552V2.70111V1.90055C10.5894 1.81679 10.6227 1.73645 10.682 1.67722C10.7412 1.61799 10.8215 1.58472 10.9053 1.58472C10.989 1.58472 11.0694 1.61799 11.1286 1.67722C11.1878 1.73645 11.2211 1.81679 11.2211 1.90055V2.67055V3.11041L11.6574 3.16647C12.2064 3.23702 12.7424 3.38363 13.25 3.6017L19.575 18.4139ZM13.25 3.66576L13.25 3.66591V3.6663V3.66666H13.3958C13.4405 3.68731 13.485 3.70851 13.5292 3.73028L13.5605 3.66666L13.25 3.66576Z"
+                    stroke="#0F222B" />
+                  <path
+                    d="M18.4555 6.84451C20.1431 6.84451 21.5111 5.47649 21.5111 3.78895C21.5111 2.10142 20.1431 0.733398 18.4555 0.733398C16.768 0.733398 15.4 2.10142 15.4 3.78895C15.4 5.47649 16.768 6.84451 18.4555 6.84451Z"
+                    fill="#4BB604" />
+                  <path d="M17.6 2.61842V2.19995H19.0666V5.13328H18.2557V2.61842H17.6Z" fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_40">
+                    <rect width="22" height="22" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-xl">
+    <div class="container-xl mt-5">
+      <div class="card detail">
+        <div class="card-body position-relative card-tanaman mx-4 my-3 text-center">
+          <img src="" alt="">
+          <h2 class="card-title fw-semibold text-center">Housplant care tips for beginner</h2>
+          <img src="./public/images/tips-image.png" alt="Growing Plants" class="mx-auto img-fluid" width="462px">
+          <p class="card-text mt-4 text-start pb-5">Lorem ipsum dolor sit amet, eam ei melius accusamus interesset. Vel
+            at tacimates atomorum tractatos, accusamus torquatos id pri. Ea rebum dicit patrioque pri, cu vix postea
+            disputando disputationi. Nulla alterum corrumpit has in, enim lorem facilisis at per. Mel tritani viderer
+            eu.<br>
+
+            <br>No audiam audire eligendi sit. Est decore liberavisse ad, utamur tractatos rationibus ei usu. Rebum
+            deserunt ea est. Sed in consul deleniti, id qui dicam persecuti. Vim vitae moderatius et.<br>
+
+            <br>Sed ne aeque patrioque, mel at saepe fabellas. Adhuc bonorum persecuti id eum, delenit invenire atomorum
+            te quo, ne vix ipsum nihil deserunt. Eam ex solet essent, iriure denique electram eu vis. Usu et volumus
+            omittam maiestatis, eos quas viderer vituperatoribus ut. Et cetero eruditi invidunt nam, qui quaeque
+            rationibus in, no volumus percipit vix.<br>
+
+            <br>Cum te option adipisci laboramus, an vim habeo dictas aeterno, nam cu libris delenit. Quas ancillae
+            voluptatibus ea vel. Ad quod stet admodum quo, ullum evertitur duo ei, ne brute integre sed. Pro nibh
+            splendide ea, albucius placerat contentiones nam an. Facilis principes ut his, eam ex saperet fuisset. Vis
+            illud torquatos referrentur cu, partem complectitur nam ne, eam movet regione cu. Meis theophrastus ei eam,
+            ei numquam vituperata vis.<br>
+
+            <br>Mel illud volumus et. Ei mel adhuc elitr, vel cu augue aliquid veritus. Sed case sensibus scribentur et,
+            sed feugiat similique interesset ex. Ipsum dicta dolores sit in, rebum autem te vel, mel inani fabellas te.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-6">
+          <h2 class="fw-semibold mb-5 px-auto">Plant Care Basic</h2>
+        </div>
+        <div class="col-6 text-end">
+          <a href="#carouselExampleIndicators3" role="button" data-slide="prev">
+            <button class="rounded-2 less-than bg-transparent mx-auto"><svg width="17" height="25" viewBox="0 0 17 25"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 2L3 12.5L15 23" stroke="#0F222B" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </button>
+          </a>
+          <a href="#carouselExampleIndicators3" role="button" data-slide="next">
+            <button class="rounded-2 more-than ms-4 mx-auto"><svg width="17" height="25" viewBox="0 0 17 25" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L14 12.5L2 23" stroke="white" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </button>
+          </a>
+        </div>
+        <div class="col-12">
+          <div id="carouselExampleIndicators3" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card rounded-5 card-plant mb-3 filter-card text-center">
+                      <h4 class="card-title fw-semibold pt-5">How to Repot a Cactus</h4>
+                      <img src="./public/images/about-image2.png" class="m-3" alt="">
+                      <div class="card-body">
+                        <button type="button"
+                          class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button mb-4">Explore
+                          Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-xl text-base mt-5">
+    <div class="row flex-lg-row-reverse align-items-center py-5 gy-5 g-lg-5">
+      <div class="col-lg-6 text-center">
+        <img src="./public/images/tips-image-2.jpg" alt="Growing Plants" class="dblock mx-lg-auto img-fluid"
+          width="538px">
+      </div>
+      <div class="col-12 col-lg-6 text-lg-start text-center">
+        <h2 class="fw-semibold fs-1 lh-sm mb-4 text-break">Houseplant care tips for beginner
+        </h2>
+        <p class="fw-semibold text-wrap text-break">Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.<br>
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+          gallery of type and scrambled it to make a type specimen book.</p>
+        <button type="button" class="btn btn-warning button-input mt-2 px-5 py-3 fw-semibold explore-button">Explore
+          Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl contact-us3 p-5 text-base position-relative mt-5">
+    <div class="position-absolute top-0 end-0 form-move border-random">
+      <div class=" form-email2 pt-5 pb-3 px-2 border border-white">
+        <div class="mb-2">
+          <input type="email" class="form-control input-email2" id="exampleFormControlInput1" placeholder="Email">
+        </div>
+        <div class="mb-2">
+          <textarea class="form-control input-email2 add-vh30" id="exampleFormControlTextarea1"
+            placeholder="Type your message.."></textarea>
+        </div>
+        <div class="mb-2 text-center">
+          <button class="btn btn-warning shadow-none rounded-4 w-75 input-email2 text-white ">Send now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-4">
+          <a class="fs-3 navbar-brand fw-semibold" href="#">Tand<span class="text-red">uran</span></a>
+          <p class="mt-5 w-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <div class="d-flex justify-content-evently"></div>
+        </div>
+        <div class="col-6 col-md-4">
+          <h3 class="fs-3">Company</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item my-3">About us</li>
+            <li class="nav-item mb-3">Careers</li>
+            <li class="nav-item mb-3">Blog</li>
+            <li class="nav-item mb-3">Pricing</li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h3 class="fs-3">Resources</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item my-3">About us</li>
+            <li class="nav-item mb-3">Careers</li>
+            <li class="nav-item mb-3">Blog</li>
+            <li class="nav-item mb-3">Pricing</li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h3 class="fs-3"></h3>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
