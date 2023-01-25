@@ -1,18 +1,16 @@
-@extends('layouts.index')
 
-@section('title', 'My Garden')
 
-@section('content')
+<?php $__env->startSection('title', 'My Garden'); ?>
+
+<?php $__env->startSection('content'); ?>
     <div class="container-xl text-base text-center my-5">
         <h2 class="fw-bold fs-1 lh-sm text-break">My Profile
         </h2>
         <img src="https://source.unsplash.com/random/300x300/?user-profile" alt="Growing Plants"
             class="dblock mx-lg-auto img-fluid my-4" width="300px">
-        {{-- <button type="button"
-            class="btn btn-warning button-input mt-2 mx-auto px-5 py-3 fw-semibold d-block explore-button">Edit</button>
-             --}}
-        <form action="{{ route('logout') }}" method="post">
-            @csrf
+        
+        <form action="<?php echo e(route('logout')); ?>" method="post">
+            <?php echo csrf_field(); ?>
             <button type="submit"
                 class="tn btn-warning button-input mt-2 mx-auto px-5 py-3 fw-semibold d-block explore-button">Logout
             </button>
@@ -47,20 +45,21 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
-                                    @foreach ($user as $data)
-                                        @foreach ($data->gardens as $item)
+                                    <?php $__currentLoopData = $user; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php $__currentLoopData = $data->gardens; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <a href="/plant/" class="text-decoration-none text-base link-dark">
                                                 <div class="card rounded-5 card-plant mb-3 text-center">
-                                                    <img src="{{ $item->link_image }}" class="m-3" alt="">
+                                                    <img src="<?php echo e($item->link_image); ?>" class="m-3" alt="">
                                                     <div class="card-body">
                                                         <h2 class="fw-semibold">
-                                                            {{ $item->name }}
+                                                            <?php echo e($item->name); ?>
+
                                                         </h2>
                                                     </div>
                                                 </div>
                                             </a>
-                                        @endforeach
-                                    @endforeach
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </div>
                             </div>
                         </div>
@@ -72,20 +71,21 @@
                             <div class="carousel-item active">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-6 col-lg-4">
-                                        @foreach ($user as $data)
-                                            @foreach ($data->gardens as $item)
+                                        <?php $__currentLoopData = $user; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php $__currentLoopData = $data->gardens; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <a href="/plant/" class="text-decoration-none text-base link-dark">
                                                     <div class="card rounded-5 card-plant mb-3 text-center">
-                                                        <img src="{{ $item->link_image }}" class="m-3" alt="">
+                                                        <img src="<?php echo e($item->link_image); ?>" class="m-3" alt="">
                                                         <div class="card-body">
                                                             <h2 class="fw-semibold">
-                                                                {{ $item->name }}
+                                                                <?php echo e($item->name); ?>
+
                                                             </h2>
                                                         </div>
                                                     </div>
                                                 </a>
-                                            @endforeach
-                                        @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
     <div class="container-xl text-base">
         <div class="row flex-lg-row-reverse align-items-center py-5">
             <div class="col-lg-7">
-                <img src="{{ url('images/explore-image.png') }}" alt="Growing Plants"
+                <img src="<?php echo e(url('images/explore-image.png')); ?>" alt="Growing Plants"
                     class="dblock mx-lg-auto img-fluid filter-image" width="1200px">
             </div>
             <div class="col-12 col-lg-5 text-lg-start text-center">
@@ -121,16 +121,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('garden.store') }}" method="POST">
-                        @csrf
+                    <form action="<?php echo e(route('garden.store')); ?>" method="POST">
+                        <?php echo csrf_field(); ?>
                         <div class="mb-3">
                             <select class="form-select" name="plant_id" id="plant_id"
                                 aria-label="Default select example">
                                 <option value="">Select your plant</option>
-                                @foreach ($plants as $item)
-                                    <option value="{{ $item->id }}">
-                                        {{ $item->name }}</option>
-                                @endforeach
+                                <?php $__currentLoopData = $plants; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($item->id); ?>">
+                                        <?php echo e($item->name); ?></option>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </select>
                         </div>
                         <div class="modal-footer">
@@ -146,7 +146,7 @@
     <div class="container-xl text-base text-center">
         <div class="row flex-lg-row align-items-center pb-5 pt-lg-">
             <div class="col-lg-7">
-                <img src="{{ url('images/tips-image.png') }}" alt="Growing Plants" class="dblock mx-lg-auto img-fluid"
+                <img src="<?php echo e(url('images/tips-image.png')); ?>" alt="Growing Plants" class="dblock mx-lg-auto img-fluid"
                     width="700px">
             </div>
             <div class="col-12 col-lg-5 text-lg-start text-center">
@@ -181,4 +181,6 @@
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Maulana\Documents\CapstoneProject-C22-045\resources\views/profile.blade.php ENDPATH**/ ?>
