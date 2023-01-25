@@ -28,7 +28,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/mygarden', [GardenController::class, 'index'])->name('index');
-    Route::post('/mygarden', [GardenController::class, 'store'])->name('garden__store');
+    Route::post('/mygarden', [GardenController::class, 'store'])->name('garden.store');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Garden;
 use App\Models\User;
 use App\Models\Plant;
 use Illuminate\Http\Request;
@@ -15,21 +16,11 @@ class GardenController extends Controller
      */
     public function index()
     {
-        $user_id = auth()->user()->id;
+        $user = User::with("gardens")->where("id", "=", auth()->user()->id)->get();
+        $plant_id_user = Garden::where("user_id", "=", auth()->user()->id)->pluck('plant_id')->all();
+        $plants = Plant::whereNotIn('id', $plant_id_user)->get();
 
-        $plants = Plant::all();
-        $users = User::where('id', $user_id)->with('plants')->get();
-        return view('profile', ['users' => $users, 'plants' => $plants]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view('profile', ['user' => $user, 'plants' => $plants]);
     }
 
     /**
@@ -40,24 +31,12 @@ class GardenController extends Controller
      */
     public function store(Request $request)
     {
-        // $user_id = auth()->user()->id;
-        // $plants = new Plant;
+        $garden = new Garden;
+        $garden->plant_id = request()->plant_id;
+        $garden->user_id = request()->user()->id;
+        $garden->save();
 
-        // $plants->name = $request->name;
-        // $plants->user_id = $request->user_id;
-        // // $plants->save();
-        // dd($plants);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Plant  $plant
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Plant $plant)
-    {
-        //
+        return redirect('/mygarden');
     }
 
     /**

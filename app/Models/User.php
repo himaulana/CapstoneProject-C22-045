@@ -43,12 +43,12 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get all of the comments for the User
+     * The roles that belong to the User
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function plants()
+    public function gardens()
     {
-        return $this->hasMany(Plant::class);
+        return $this->belongsToMany(Plant::class, 'gardens', 'user_id', 'plant_id');
     }
 }

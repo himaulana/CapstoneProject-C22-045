@@ -25,8 +25,6 @@ return new class extends Migration
             $table->text('how_plant');
             $table->text('care_plant');
             $table->text('pest_disease');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete(('restrict'));
             $table->timestamps();
         });
     }

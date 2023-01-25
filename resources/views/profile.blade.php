@@ -47,22 +47,22 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
-                                    @foreach ($users as $item)
-                                        @foreach ($item->plants as $plant)
-                                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                                <a href="/plant/{{ $plant->id }}"
-                                                    class="text-decoration-none text-base link-dark">
+                                    <div class="col-sm-12 col-md-6 col-lg-4">
+                                        @foreach ($user as $data)
+                                            @foreach ($data->gardens as $item)
+                                                <a href="/plant/" class="text-decoration-none text-base link-dark">
                                                     <div class="card rounded-5 card-plant mb-3 text-center">
-                                                        <img src="{{ $plant->link_image }}.{{ $plant->id }}"
-                                                            class="m-3" alt="">
+                                                        <img src="{{ $item->link_image }}" class="m-3" alt="">
                                                         <div class="card-body">
-                                                            <h2 class="fw-semibold">{{ $plant->name }}</h3>
+                                                            <h2 class="fw-semibold">
+                                                                {{ $item->name }}
+                                                            </h2>
                                                         </div>
                                                     </div>
                                                 </a>
-                                            </div>
+                                            @endforeach
                                         @endforeach
-                                    @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -97,11 +97,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('garden__store') }}" method="POST">
+                    <form action="{{ route('garden.store') }}" method="POST">
                         @csrf
                         <div class="mb-3">
-                            <select class="form-select" name="user_id" id="user_id" aria-label="Default select example">
-                                <option>Select your plant</option>
+                            <select class="form-select" name="plant_id" id="plant_id" aria-label="Default select example">
+                                <option value="">Select your plant</option>
                                 @foreach ($plants as $item)
                                     <option value="{{ $item->id }}">
                                         {{ $item->name }}</option>

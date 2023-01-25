@@ -27,7 +27,6 @@ class PlantFactory extends Factory
             'how_plant' => $this->faker->text(100),
             'care_plant' => $this->faker->text(100),
             'pest_disease' => $this->faker->text(100),
-            'user_id' => $this->faker->randomDigitNotNull(),
         ];
     }
 }
