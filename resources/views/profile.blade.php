@@ -19,25 +19,28 @@
         </form>
 
     </div>
-    <div class="col-12">
+    <div class="col-10" style="margin: auto;">
         <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row">
                         @foreach ($user as $data)
-                        @foreach ($data->gardens as $item)
-                            <a href="/plant/" class="text-decoration-none text-base link-dark">
-                                <div class="card rounded-5 card-plant mb-3 text-center">
-                                    <img src="{{ $item->link_image }}" class="m-3" alt="">
-                                    <div class="card-body">
-                                        <h2 class="fw-semibold">
-                                            {{ $item->name }}
-                                        </h2>
+                            @foreach ($data->gardens as $item)
+                                <div class="col-sm-10 col-md-6 col-lg-4">
+                                    <div class="text-decoration-none text-base link-dark">
+                                        <div class="card rounded-5 card-plant mb-3 text-center">
+                                            <img src="https://source.unsplash.com/random/300x300/?decorative-plant,{{ $item->id }}"
+                                                class="m-3" alt="">
+                                            <div class="card-body">
+                                                <h3 class="fw-semibold"><a href="/plant/{{ $item->id }}"
+                                                        style="text-decoration: none; color:black">{{ $item->name }}</a>
+                                                </h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
+                            @endforeach
                         @endforeach
-                    @endforeach
                     </div>
                 </div>
             </div>
@@ -72,8 +75,7 @@
                     <form action="{{ route('garden.store') }}" method="POST">
                         @csrf
                         <div class="mb-3">
-                            <select class="form-select" name="plant_id" id="plant_id"
-                                aria-label="Default select example">
+                            <select class="form-select" name="plant_id" id="plant_id" aria-label="Default select example">
                                 <option value="">Select your plant</option>
                                 @foreach ($plants as $item)
                                     <option value="{{ $item->id }}">

@@ -17,84 +17,33 @@
         </form>
 
     </div>
-
-    <section class="py-5">
-        <div class="container-xl">
-            <div class="row">
-                <div class="col-6">
-                    <h2 class="fw-semibold mb-5 px-auto">My Garden</h2>
-                </div>
-                <div class="col-6 text-end">
-                    <a href="#carouselExampleIndicators3" role="button" data-slide="prev">
-                        <button class="rounded-2 less-than bg-transparent mx-auto"><svg width="17" height="25"
-                                viewBox="0 0 17 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 2L3 12.5L15 23" stroke="#0F222B" stroke-width="3" stroke-linecap="round" />
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="#carouselExampleIndicators3" role="button" data-slide="next">
-                        <button class="rounded-2 more-than ms-4 mx-auto"><svg width="17" height="25"
-                                viewBox="0 0 17 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 2L14 12.5L2 23" stroke="white" stroke-width="3" stroke-linecap="round" />
-                            </svg>
-                        </button>
-                    </a>
-                </div>
-                <div class="col-12">
-                    <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <?php $__currentLoopData = $user; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <?php $__currentLoopData = $data->gardens; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <a href="/plant/" class="text-decoration-none text-base link-dark">
-                                                <div class="card rounded-5 card-plant mb-3 text-center">
-                                                    <img src="<?php echo e($item->link_image); ?>" class="m-3" alt="">
-                                                    <div class="card-body">
-                                                        <h2 class="fw-semibold">
-                                                            <?php echo e($item->name); ?>
-
-                                                        </h2>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6 col-lg-4">
-                                        <?php $__currentLoopData = $user; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <?php $__currentLoopData = $data->gardens; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <a href="/plant/" class="text-decoration-none text-base link-dark">
-                                                    <div class="card rounded-5 card-plant mb-3 text-center">
-                                                        <img src="<?php echo e($item->link_image); ?>" class="m-3" alt="">
-                                                        <div class="card-body">
-                                                            <h2 class="fw-semibold">
-                                                                <?php echo e($item->name); ?>
-
-                                                            </h2>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    <div class="col-10" style="margin: auto;">
+        <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <?php $__currentLoopData = $user; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php $__currentLoopData = $data->gardens; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <div class="col-sm-10 col-md-6 col-lg-4">
+                                    <div class="text-decoration-none text-base link-dark">
+                                        <div class="card rounded-5 card-plant mb-3 text-center">
+                                            <img src="https://source.unsplash.com/random/300x300/?decorative-plant,<?php echo e($item->id); ?>"
+                                                class="m-3" alt="">
+                                            <div class="card-body">
+                                                <h3 class="fw-semibold"><a href="/plant/<?php echo e($item->id); ?>"
+                                                        style="text-decoration: none; color:black"><?php echo e($item->name); ?></a>
+                                                </h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <div class="container-xl text-base">
         <div class="row flex-lg-row-reverse align-items-center py-5">
@@ -124,8 +73,7 @@
                     <form action="<?php echo e(route('garden.store')); ?>" method="POST">
                         <?php echo csrf_field(); ?>
                         <div class="mb-3">
-                            <select class="form-select" name="plant_id" id="plant_id"
-                                aria-label="Default select example">
+                            <select class="form-select" name="plant_id" id="plant_id" aria-label="Default select example">
                                 <option value="">Select your plant</option>
                                 <?php $__currentLoopData = $plants; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <option value="<?php echo e($item->id); ?>">
