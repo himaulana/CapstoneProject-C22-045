@@ -19,82 +19,30 @@
         </form>
 
     </div>
-
-    <section class="py-5">
-        <div class="container-xl">
-            <div class="row">
-                <div class="col-6">
-                    <h2 class="fw-semibold mb-5 px-auto">My Garden</h2>
-                </div>
-                <div class="col-6 text-end">
-                    <a href="#carouselExampleIndicators3" role="button" data-slide="prev">
-                        <button class="rounded-2 less-than bg-transparent mx-auto"><svg width="17" height="25"
-                                viewBox="0 0 17 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 2L3 12.5L15 23" stroke="#0F222B" stroke-width="3" stroke-linecap="round" />
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="#carouselExampleIndicators3" role="button" data-slide="next">
-                        <button class="rounded-2 more-than ms-4 mx-auto"><svg width="17" height="25"
-                                viewBox="0 0 17 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 2L14 12.5L2 23" stroke="white" stroke-width="3" stroke-linecap="round" />
-                            </svg>
-                        </button>
-                    </a>
-                </div>
-                <div class="col-12">
-                    <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    @foreach ($user as $data)
-                                        @foreach ($data->gardens as $item)
-                                            <a href="/plant/" class="text-decoration-none text-base link-dark">
-                                                <div class="card rounded-5 card-plant mb-3 text-center">
-                                                    <img src="{{ $item->link_image }}" class="m-3" alt="">
-                                                    <div class="card-body">
-                                                        <h2 class="fw-semibold">
-                                                            {{ $item->name }}
-                                                        </h2>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        @endforeach
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6 col-lg-4">
-                                        @foreach ($user as $data)
-                                            @foreach ($data->gardens as $item)
-                                                <a href="/plant/" class="text-decoration-none text-base link-dark">
-                                                    <div class="card rounded-5 card-plant mb-3 text-center">
-                                                        <img src="{{ $item->link_image }}" class="m-3" alt="">
-                                                        <div class="card-body">
-                                                            <h2 class="fw-semibold">
-                                                                {{ $item->name }}
-                                                            </h2>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            @endforeach
-                                        @endforeach
+    <div class="col-12">
+        <div id="carouselExampleIndicators2" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        @foreach ($user as $data)
+                        @foreach ($data->gardens as $item)
+                            <a href="/plant/" class="text-decoration-none text-base link-dark">
+                                <div class="card rounded-5 card-plant mb-3 text-center">
+                                    <img src="{{ $item->link_image }}" class="m-3" alt="">
+                                    <div class="card-body">
+                                        <h2 class="fw-semibold">
+                                            {{ $item->name }}
+                                        </h2>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </a>
+                        @endforeach
+                    @endforeach
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <div class="container-xl text-base">
         <div class="row flex-lg-row-reverse align-items-center py-5">
